@@ -1,0 +1,24 @@
+<form action="/logout" method="post">
+    <input type="Submit" value="Logout" />
+</form>
+<div id="bg3">
+<h1>All Recent Posts</h1>
+<% Post.all.reverse.each do |post| %>
+    <div id="posts">
+        <div id="user">
+            User: <%=post.user_id%>
+        </div>
+        <div id="title">
+            <%= post.title %>
+        </div>
+     <br>
+        <div id="body">
+            <%= post.body %>
+        </div>
+     <br>
+     <br>
+     <br>
+    </div>
+
+ <% end %>
+</div>

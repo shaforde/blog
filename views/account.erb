@@ -1,0 +1,42 @@
+<p> Logged in as <%= session[:user_id] %> </p>
+
+<form action="/logout" method="post">
+    <input type="Submit" value="Logout" />
+</form>
+
+<form action="/cancel" method="get">
+    <input type="Submit" value="Cancel" />
+</form>
+<div id="bg4">
+<h1> Account Info.</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<% User.find(session[:user_id]) do |user| %>
+    <div id="userinfo">
+        <div id="firstname">
+            <%= user.first_name %>
+        </div>
+     <br>
+        <div id="lastname">
+            <%= user.last_name %>
+        </div>
+     <br>
+     <div id="birthday">
+        <div id="birthday">
+            <%= user.birthday %>
+        </div>
+     <br>
+        <div id="email">
+            <%= user.email %>
+        </div>
+     <br>
+     <br>
+     <br>
+    </div>
+
+ <% end %>
+</div>

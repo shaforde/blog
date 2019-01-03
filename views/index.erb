@@ -1,0 +1,74 @@
+<body >
+<div id="bg">
+
+ <audio controls autoplay >
+
+    <source src="bigbadsoca.mp3" type="audio/mpeg">
+
+ </audio>
+
+<div id="card">
+<h1> Blog</h1>
+
+<h2>Create an Account</h2>
+
+<form class="signup" method="POST" action="/signup">
+
+  <div class="equal width fields">
+    <div class="field">
+      <label>First name</label>
+      <input type="text" name="first_name" placeholder="First Name">
+    </div>
+    <br>
+
+    <div class="field">
+      <label>Last name</label>
+      <input type="text" name="last_name" placeholder="Last Name">
+    </div>
+
+     <br>
+    <div class="date field">
+        <label>Birthday</label>
+        <input type="text" name="birthday" placeholder="xx/xx/xxxx">
+    </div>
+    <br>
+
+    <div class="field">
+      <label>Email</label>
+      <input type="text" name="email" placeholder="Email">
+    </div>
+    <br>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Password">
+    </div>
+  </div>
+  <br>
+  <button>Submit</button>
+</form>
+
+<h3>or</h3>
+
+
+<form class="login" method="POST"  action="/login">
+  <h4>Login</h4>
+  <div class="equal width fields">
+    <div class="field">
+      <label>Email</label>
+      <input required type="text" placeholder="Email" name="email">
+    </div>
+    <br>
+    <div class="field">
+      <label>Password</label>
+      <input required type="password" placeholder="Password" name="password">
+    </div>
+  </div>
+  <br>
+  <button>Login</button>
+ </form>
+</div>
+</div>
+ <script src="/main.js"></script>
+</body>
+
+

@@ -1,0 +1,49 @@
+
+
+<p> Logged in as <%= session[:user_id] %> </p>
+<form action="/logout" method="post" >
+    <input type="Submit" value="Logout" />
+</form>
+<div id="bg2">
+
+<div class="newposts">
+    <label>Create New Post</label>
+
+    <form action="/add" method="post">
+        <textarea required type="text" name="title"></textarea>
+        <br>
+        <textarea required type="text" name="body" rows="10"></textarea>
+        <br>
+        <input type="Submit" value="Add Post" />
+    </form>
+
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Your Recent Posts</h1>
+
+
+ <% User.find(session[:user_id]).posts.reverse.each do |post| %>
+    <div id="posts">
+        <div id="title">
+            <%= post.title %>
+        </div>
+     <br>
+        <div id="body">
+            <%= post.body %>
+        </div>
+     <br>
+     <br>
+     <br>
+    </div>
+
+ <% end %>
+
+
+</div>
+
